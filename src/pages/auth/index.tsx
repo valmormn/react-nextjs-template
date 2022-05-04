@@ -5,14 +5,14 @@ import Head from 'next/head'
 // import file from './text.mdx'
 // import { Example } from './example.mdx'
 
-const About = () => {
+const Auth = () => {
   return (
     <>
       <Head>
-        <title>About</title>
+        <title>Auth</title>
       </Head>
-      <article id="about" data-type={Math.random()}>
-        <h1>About</h1>
+      <article id="auth" data-type={Math.random()}>
+        <h1>Auth</h1>
         <p>
           We want to be the first choice for our customers providing customized
           solutions.
@@ -22,4 +22,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Auth
