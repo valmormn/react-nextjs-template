@@ -6,7 +6,8 @@
     "dev": "next dev -H 192.168.0.123 -p 13131",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install"
   },
   "dependencies": {
     "next": "12.1.6",
