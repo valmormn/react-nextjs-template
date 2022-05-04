@@ -22,5 +22,16 @@
   .main > * {
     padding: 3px 96px
   }
-  
+}
+
+@media only screen and (min-width: 600px) {
+  .main > * {
+    padding: 3px 60px
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main > * {
+    padding: 3px 12px
+  }
 }
