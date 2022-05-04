@@ -11,7 +11,7 @@ const Blog = () => {
       <Head>
         <title>Blog</title>
       </Head>
-      <article id="blog" data-type={Math.random()}>
+      <article id="blog" data-type="">
         <h1>Blog</h1>
         <p>
           Blog page.
