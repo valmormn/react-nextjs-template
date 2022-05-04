@@ -7,7 +7,6 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    
     extend: {
       colors: {
         // 'accent-1': '#FAFAFA',
