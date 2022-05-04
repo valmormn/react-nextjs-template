@@ -9,7 +9,7 @@ import WhatsAppBadge from './whatsApp.svg'
 // Whatsapp badge for contact
 // https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg
 
-const myLoader = ({ src, width, quality }) => {
+const myLoader = ({ src, width, quality }:any) => {
   return `https://example.com/${src}?w=${width}&q=${quality || 75}`
 }
 // loader={myLoader}
