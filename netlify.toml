@@ -4,6 +4,5 @@
   # Directory to change to before starting a build.
   # This is where we will look for package.json/.nvmrc/etc.
   publish = "public"
-  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
-[build.environment]
+  command = "pnpm build || ( npm install pnpm && pnpm build )"
   NPM_FLAGS="--prefix=/dev/null"
