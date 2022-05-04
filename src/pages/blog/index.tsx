@@ -14,8 +14,7 @@ const Blog = () => {
       <article id="blog" data-type={Math.random()}>
         <h1>Blog</h1>
         <p>
-          We want to be the first choice for our customers providing customized
-          solutions.
+          Blog page.
         </p>
       </article>
     </>
