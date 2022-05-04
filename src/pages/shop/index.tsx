@@ -14,7 +14,7 @@ const Shop = () => {
       <article id="shop" data-type="">
         <h1>Shop</h1>
         <p>
-          Shop page.
+          Shop page!
         </p>
       </article>
     </>

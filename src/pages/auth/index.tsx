@@ -13,10 +13,9 @@ const Auth = () => {
       </Head>
       <article id="auth" data-type={Math.random()}>
         <h1>Auth</h1>
-        <p>
-          We want to be the first choice for our customers providing customized
-          solutions.
-        </p>
+        <button className="btn">Entrar</button>
+        <button className="btn">Cadastrar</button>
+        <button className="btn">Recuperar Acesso</button>
       </article>
     </>
   )
