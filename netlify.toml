@@ -3,7 +3,7 @@
 [build]
   # Directory to change to before starting a build.
   # This is where we will look for package.json/.nvmrc/etc.
-  # If not set, defaults to the root directory.
-  base = "."
+  publish = "public"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 [build.environment]
   NPM_FLAGS="--prefix=/dev/null"
