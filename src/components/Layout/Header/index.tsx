@@ -1,8 +1,39 @@
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 const xtyle = `navbar mb-2 shadow-lg bg-neutral text-neutral-content flex justify-between items-center`
 
+const themes = [
+  'mytheme',
+  'forest',
+  'retro',
+  'dark',
+  'light',
+  // 'synthwave',
+  'emerald',
+  'mytheme',
+  'myothertheme'
+]
+
+const handleScroll = () => {
+  console.log(scrollY)
+}
+
 const Header = () => {
+  const themeSwitch = (value: any) => {
+    console.log('theme switch')
+    console.log(value)
+    console.log(value.target.innerHTML)
+
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <>
       <header className={xtyle}>
@@ -51,15 +82,13 @@ const Header = () => {
               tabIndex={0}
               className="p-2  menu dropdown-content bg-neutral rounded-box w-52"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Item 2</a>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {themes.map((theme, index) => {
+                return (
+                  <li key={index} value={theme} onClick={themeSwitch}>
+                    <a>{theme}</a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           <Link href="/about">
