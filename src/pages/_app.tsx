@@ -5,16 +5,22 @@ import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
 
 import Layout from '$components/Layout'
+import { createContext } from 'react'
+
+const theme = ''
+const ThemeContext = createContext(theme)
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>My page title</title>
-      </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeContext.Provider value={theme}>
+        <Head>
+          <title>My page title</title>
+        </Head>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeContext.Provider>
     </>
   )
 }
