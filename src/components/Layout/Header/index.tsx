@@ -21,15 +21,18 @@ const handleScroll = () => {
   console.log(scrollY)
 }
 
-function useSetThemeStyle(args) {
-  const [isOnline, setIsOnline] = useState(null)
+// function useSetThemeStyle(args) {
+//   const [isOnline, setIsOnline] = useState(null)
+// }
 
+  
+
+
+const Header = () => {
   useEffect(() => {
     console.log('useSetThemeStyle Function not implemented.')
   })
-}
 
-const Header = () => {
   const ThemeSwitch = (value: any, props: any) => {
     console.log('theme switch')
     console.log('props')
@@ -108,7 +111,7 @@ const Header = () => {
             >
               {themes.map((theme, index) => {
                 return (
-                  <li key={index} value={theme} onClick={ThemeSwitch}>
+                  <li key={index} value={theme} >
                     <a>{theme}</a>
                   </li>
                 )
@@ -129,3 +132,5 @@ const Header = () => {
 }
 
 export default Header
+
+// {/*onClick={ThemeSwitch}*/}
